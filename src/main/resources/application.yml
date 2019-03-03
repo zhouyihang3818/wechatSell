@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sell?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 127.0.0.1
+    port: 6379
+server:
+  servlet:
+    context-path: /sell
+wechat:
+  myAppId: wx8392bac0d6e0f1dd
+  myAppSecret: b4e244936246d1c4f1bb0ecb8107723e
+  openAppId: wx8392bac0d6e0f1dd
+  openAppSecret: b4e244936246d1c4f1bb0ecb8107723e
+  mchId: 1409146202
+  mchKey: c976503d34ca432c601364f969fd8d85
+  keyPath:  /var/weixin_cert/h5.p12
+  notifyUrl: http://titi.natapp1.cc/sell/pay/notify
+  templateId:
+    orderStatus: dsgdgsdgdsfgdf
+
+project-url:
+  wechatMpAuthorize: http://titi.natapp1.cc
+  wechatOpenAuthorize: http://titi.natapp1.cc
+  sell: http://titi.natapp1.cc
+
+logging:
+  level:
+    org.springframework.web: debug
